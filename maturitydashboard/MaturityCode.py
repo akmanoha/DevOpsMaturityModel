@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 from fuzzywuzzy import process
+import os
 
 # File paths
 mapping_file = 'DevOps_Maturity_Mapping.xlsx'
@@ -11,9 +12,13 @@ response_file = 'DevOps_Maturity_Assessment_Demo_Response.xlsx'
 recommendation_file = 'recommendations_v1.xlsx'
 
 # Load files
-mapping_df = pd.read_excel(mapping_file)
-response_df = pd.read_excel(response_file)
-recommendation_xls = pd.ExcelFile(recommendation_file)
+base_path = os.path.dirname(os.path.abspath(__file__))
+mapping_path = os.path.join(base_path, mapping_file)
+response_path = os.path.join(base_path, response_file)
+recommendation_path = os.path.join(base_path, recommendation_file)
+mapping_df = pd.read_excel(mapping_path)
+response_df = pd.read_excel(response_path)
+recommendation_xls = pd.ExcelFile(recommendation_path)
 
 # Fuzzy match function
 def fuzzy_match(question, choices, threshold=85):
