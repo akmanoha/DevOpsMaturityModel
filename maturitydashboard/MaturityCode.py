@@ -13,10 +13,11 @@ recommendation_file = 'recommendations_v1.xlsx'
 
 # Load files
 base_path = os.path.dirname(os.path.abspath(__file__))
-print("Files in dir:", os.listdir(base_path))
 mapping_path = os.path.join(base_path, mapping_file)
 response_path = os.path.join(base_path, response_file)
 recommendation_path = os.path.join(base_path, recommendation_file)
+
+print("recommendations path:", recommendation_path)
 mapping_df = pd.read_excel(mapping_path)
 response_df = pd.read_excel(response_path)
 recommendation_xls = pd.ExcelFile(recommendation_path)
