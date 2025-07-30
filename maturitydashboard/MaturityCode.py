@@ -9,12 +9,17 @@ import os
 # File paths
 mapping_file = 'DevOps_Maturity_Mapping.xlsx'
 response_file = 'DevOps_Maturity_Assessment_Demo_Response.xlsx'
-recommendation_file = 'recommendations_v1.xlsx'
+#recommendation_file = 'recommendations_v1.xlsx'
+
 
 # Load files
 base_path = os.path.dirname(os.path.abspath(__file__))
 mapping_path = os.path.join(base_path, mapping_file)
 response_path = os.path.join(base_path, response_file)
+for file in os.listdir(base_path):
+    if file.lower() == "recommendations_v1.xlsx":
+        recommendation_file = file
+        break
 recommendation_path = os.path.join(base_path, recommendation_file)
 print("mapping path:", mapping_path)
 print("recommendations path:", recommendation_path)
