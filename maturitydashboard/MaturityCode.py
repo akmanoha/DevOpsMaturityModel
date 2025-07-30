@@ -16,7 +16,7 @@ base_path = os.path.dirname(os.path.abspath(__file__))
 mapping_path = os.path.join(base_path, mapping_file)
 response_path = os.path.join(base_path, response_file)
 recommendation_path = os.path.join(base_path, recommendation_file)
-
+print("mapping path:", mapping_path)
 print("recommendations path:", recommendation_path)
 mapping_df = pd.read_excel(mapping_path)
 response_df = pd.read_excel(response_path)
