@@ -1,7 +1,0 @@
-streamlit
-pandas
-numpy
-openpyxl
-fuzzywuzzy
-python-Levenshtein
-plotly
