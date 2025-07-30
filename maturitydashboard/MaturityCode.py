@@ -13,6 +13,7 @@ recommendation_file = 'recommendations_v1.xlsx'
 
 # Load files
 base_path = os.path.dirname(os.path.abspath(__file__))
+print("Files in dir:", os.listdir(base_path))
 mapping_path = os.path.join(base_path, mapping_file)
 response_path = os.path.join(base_path, response_file)
 recommendation_path = os.path.join(base_path, recommendation_file)
